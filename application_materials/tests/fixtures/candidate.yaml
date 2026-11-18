@@ -1,0 +1,14 @@
+name: "Jane Doe"
+email: "jane.doe@example.com"
+phone: "(555) 123-4567"
+location: "New York, NY"
+evidence_catalog:
+  EV-001: "Built AWS CI/CD pipeline"
+  EV-002: "Reduced deployment time by 40%"
+  EV-003: "Led migration to Kubernetes"
+  EV-004: "Implemented Terraform modules"
+education:
+  - degree: "B.S. Computer Science"
+    institution: "State University"
+certifications:
+  - "AWS Certified Solutions Architect"

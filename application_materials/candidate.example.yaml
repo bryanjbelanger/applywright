@@ -1,0 +1,21 @@
+# Example candidate and evidence catalog. All data here is fake.
+# Copy this file to candidate.yaml and replace every value with your own facts.
+# Every claim in a resume or cover letter must cite an ID from evidence_catalog.
+name: "Alex Example"
+email: "alex.example@example.com"
+phone: "555-0100"
+location: "Springfield, USA"
+linkedin: "https://www.linkedin.com/in/alex-example"
+github: "https://github.com/alex-example"
+evidence_catalog:
+  EV-001: "Built and ran infrastructure on AWS, including Docker and Kubernetes workloads."
+  EV-002: "Automated infrastructure as code (IaC) with Terraform, Puppet, Ansible, Packer, and Vagrant."
+  EV-003: "Built CI/CD and continuous delivery pipelines with Jenkins, GitHub, GitLab, and Argo CD (GitOps), and stored build artifacts in Artifactory."
+  EV-004: "Practiced DevOps and DevSecOps on Linux (RHEL) platform and infrastructure, with CIS hardening and immutable images."
+  EV-005: "Administered VMware virtualization and wrote Python and Bash automation."
+  EV-006: "Packaged and deployed Java web services to Tomcat."
+education:
+  - degree: "B.S. Computer Science"
+    institution: "Example State University"
+certifications:
+  - "Example Cloud Practitioner (fictional)"

@@ -1,0 +1,38 @@
+# Example screening profile. All data here is fake.
+# Copy this file to candidate_profile.yaml and edit it. The copy is Git-ignored.
+# This profile is for job screening only. It is not a source for resume claims.
+schema_version: 1
+
+campaigns:
+  - id: cloud_platform_architecture
+    name: Cloud Platform Architecture
+  - id: devops_sre_automation
+    name: DevOps SRE Automation
+  - id: enterprise_platform_automation
+    name: Enterprise Platform Automation
+
+evidence_items:
+  - evidence_id: exp_10yr_it
+    description: "About 10 years in IT"
+  - evidence_id: tech_stack_devops
+    description: "Ansible, Terraform, AWS, Kubernetes, Docker, Linux, Jenkins and CI/CD"
+  - evidence_id: sec_compliance
+    description: "Applied security baselines to Linux servers"
+  - evidence_id: aws_tf_puppet
+    description: "Provisioned cloud servers with infrastructure as code"
+  - evidence_id: rhel_hardening_automation
+    description: "Automated Red Hat Enterprise Linux hardening using Puppet and Ansible"
+  - evidence_id: github_actions_quality_pipelines
+    description: "GitHub Actions pipelines running code quality and security checks"
+
+hard_disqualifiers:
+  - disqualifier_id: unrelated_discipline
+    description: "unrelated architect disciplines"
+  - disqualifier_id: unavailable_clearance
+    description: "mandatory unavailable clearance"
+  - disqualifier_id: incompatible_relocation
+    description: "incompatible mandatory relocation or on-site attendance"
+  - disqualifier_id: closed_posting
+    description: "closed or expired posting"
+  - disqualifier_id: critical_specialty_absent
+    description: "critical required specialty absent from the candidate profile"

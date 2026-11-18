@@ -1,0 +1,45 @@
+<!-- RECONSTRUCTED fixture, not a saved page. Ashby renders its form with
+     JavaScript, so a plain HTTP fetch has no form markup. The field list
+     (paths, types, titles, required flags) comes from Ashby's public posting
+     API (jobs.ashbyhq.com/api/non-user-graphql, op ApiJobPostingWithForm) for a
+     public posting. The element ids and names below are an assumption. -->
+<form id="ashby-application">
+  <div class="field">
+    <label for="_systemfield_name">Name</label>
+    <input id="_systemfield_name" name="_systemfield_name" type="text" required>
+  </div>
+  <div class="field">
+    <label for="_systemfield_email">Email</label>
+    <input id="_systemfield_email" name="_systemfield_email" type="email" required>
+  </div>
+  <div class="field">
+    <label for="_systemfield_resume">Resume</label>
+    <input id="_systemfield_resume" name="_systemfield_resume" type="file">
+  </div>
+  <div class="field">
+    <label for="cl-file">Cover Letter</label>
+    <input id="cl-file" name="cover-letter-path" type="file">
+  </div>
+  <div class="field">
+    <label for="li-path">LinkedIn Profile</label>
+    <input id="li-path" name="2f73c135-4c72-40cf-84bc-ba7700192f2f" type="text" required>
+  </div>
+  <div class="field">
+    <label for="gh-path">GitHub</label>
+    <input id="gh-path" name="aaaa0000-0000-0000-0000-000000000001" type="text">
+  </div>
+  <div class="field">
+    <label for="_systemfield_location">Which country do you intend to work from?</label>
+    <input id="_systemfield_location" name="_systemfield_location" type="text" role="combobox" required>
+  </div>
+  <fieldset class="field">
+    <legend>Will you now or in the future require sponsorship for employment visa status to work in this location?</legend>
+    <label><input type="radio" name="9dbddae8-2594-40be-b4b9-92420e945f18" value="true" required> Yes</label>
+    <label><input type="radio" name="9dbddae8-2594-40be-b4b9-92420e945f18" value="false" required> No</label>
+  </fieldset>
+  <div class="field">
+    <label for="lt-1">What is something you have built that you are particularly proud of?</label>
+    <textarea id="lt-1" name="5668eabe-daee-426a-bfac-e22ee07a4a5e" required></textarea>
+  </div>
+  <button type="submit" class="submit">Submit Application</button>
+</form>

@@ -1,0 +1,42 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install renderer system libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz-subset0 fonts-dejavu-core
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install Poetry
+        run: pipx install poetry
+      - name: Install dependencies
+        run: poetry install --with document-rendering,dev
+      - name: Run Python tests
+        run: poetry run pytest
+      - name: Check repository policy
+        run: |
+          cp application_materials/candidate.example.yaml application_materials/candidate.yaml
+          poetry run python -m application_materials.tools.check_repository
+
+  extension:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Install dependencies
+        working-directory: extension
+        run: npm ci
+      - name: Run extension tests
+        working-directory: extension
+        run: node --test tests/*.test.js

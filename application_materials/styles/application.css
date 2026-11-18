@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.4;
+    margin: 40px;
+}
+h1 {
+    font-size: 16pt;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
+}
+h2 {
+    font-size: 14pt;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+h3 {
+    font-size: 12pt;
+    margin-top: 6px;
+    margin-bottom: 3px;
+}
+p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+ul {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+li {
+    margin-bottom: 3px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+li > ul {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+li > ul > li {
+    margin-bottom: 2px;
+}
+.engagement {
+    margin-bottom: 6px;
+}
+.engagement-overview {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.achievement-list {
+    margin-top: 2px;
+    margin-bottom: 4px;
+    padding-left: 20px;
+}
+.achievement-list li {
+    margin-bottom: 2px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}

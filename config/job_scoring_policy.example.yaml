@@ -1,0 +1,28 @@
+schema_version: 1
+
+scoring_weights:
+  campaign_and_role_family_match: 20
+  required_technical_skills: 25
+  direct_career_evidence: 20
+  seniority_and_responsibility_alignment: 10
+  architecture_and_leadership_alignment: 10
+  location_and_work_arrangement: 10
+  compensation_and_employment_type: 5
+
+overrides:
+  missing_description: "blocked"
+  hard_disqualifier: "reject"
+
+score_thresholds:
+  - min_score: 90
+    max_score: 100
+    decision: "strong_recommend"
+  - min_score: 82
+    max_score: 89
+    decision: "recommend"
+  - min_score: 72
+    max_score: 81
+    decision: "manual_review"
+  - min_score: 0
+    max_score: 71
+    decision: "reject"

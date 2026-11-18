@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="application.css">
+</head>
+<body>
+    <h1>Cover Letter</h1>
+    <p><strong>To the Hiring Team at {{ cover_letter.company_name }}:</strong></p>
+    <p><strong>Re: {{ cover_letter.position }}</strong></p>
+    
+    {% for paragraph in cover_letter.paragraphs %}
+    <p class="cover-letter-paragraph">{{ paragraph }}</p>
+    {% endfor %}
+
+    <div class="signature-block">
+        <p>Sincerely,</p>
+        <p>{{ candidate.name }}</p>
+    </div>
+</body>
+</html>

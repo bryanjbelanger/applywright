@@ -1,0 +1,34 @@
+# Personal data (never commit)
+application_materials/candidate.yaml
+application_materials/jobs/
+application_materials/work/
+application_materials/apply_bundles/
+config/candidate_profile.yaml
+config/job_scoring_policy.yaml
+data/
+*.db
+*.sqlite
+*.sqlite3
+.mcp.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+poetry.toml
+
+# Node
+node_modules/
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+.DS_Store

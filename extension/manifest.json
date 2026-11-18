@@ -1,0 +1,83 @@
+{
+  "manifest_version": 3,
+  "name": "Applywright",
+  "version": "0.1.0",
+  "description": "Fills job application forms from a local Applywright bundle. Never submits. Optional JobCopilot export.",
+  "permissions": [
+    "storage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://app.jobcopilot.com/*",
+    "https://boards.greenhouse.io/*",
+    "https://job-boards.greenhouse.io/*",
+    "https://jobs.lever.co/*",
+    "https://jobs.ashbyhq.com/*",
+    "https://www.linkedin.com/jobs/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.jobcopilot.com/*"
+      ],
+      "js": [
+        "extraction/normalize.js",
+        "extraction/selectors.js",
+        "extraction/extract_jobs.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://boards.greenhouse.io/*",
+        "https://job-boards.greenhouse.io/*"
+      ],
+      "js": [
+        "apply/fill_common.js",
+        "apply/greenhouse.js",
+        "apply/content_apply.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://jobs.lever.co/*"
+      ],
+      "js": [
+        "apply/fill_common.js",
+        "apply/lever.js",
+        "apply/content_apply.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://jobs.ashbyhq.com/*"
+      ],
+      "js": [
+        "apply/fill_common.js",
+        "apply/ashby.js",
+        "apply/content_apply.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.linkedin.com/jobs/*"
+      ],
+      "js": [
+        "linkedin/linkedin_extract.js",
+        "linkedin/linkedin_content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

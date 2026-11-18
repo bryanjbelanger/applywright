@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "email", "phone", "location", "evidence_catalog", "education", "certifications"],
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "email": { "type": "string", "minLength": 1 },
+    "phone": { "type": "string", "minLength": 1 },
+    "location": { "type": "string", "minLength": 1 },
+    "linkedin": { "type": "string", "minLength": 1 },
+    "github": { "type": "string", "minLength": 1 },
+    "evidence_catalog": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["degree", "institution"],
+        "properties": {
+          "degree": { "type": "string", "minLength": 1 },
+          "institution": { "type": "string", "minLength": 1 }
+        }
+      },
+      "minItems": 1
+    },
+    "certifications": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

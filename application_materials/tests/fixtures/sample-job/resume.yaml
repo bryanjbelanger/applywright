@@ -1,0 +1,36 @@
+summary: 
+  text: "Fictional DevOps Engineer with a passion for automation."
+  evidence_ids: ["EV-001"]
+core_skills:
+  - text: "AWS"
+    evidence_ids: ["EV-001"]
+  - text: "Kubernetes"
+    evidence_ids: ["EV-003"]
+  - text: "Terraform"
+    evidence_ids: ["EV-004"]
+experience:
+  - employer: "TechCorp"
+    title: "Senior Engineer"
+    start_year: "2018"
+    end_year: "2023"
+    overview:
+      text: "Led the infrastructure team."
+      evidence_ids: ["EV-003"]
+    engagements:
+      - client: "FinBank"
+        overview:
+          text: "Modernized banking platform."
+          evidence_ids: ["EV-002"]
+        achievements:
+          - text: "Built a highly available AWS architecture."
+            evidence_ids: ["EV-001"]
+          - text: "Migrated monolith to microservices."
+            evidence_ids: ["EV-003"]
+          - text: "Automated provisioning with Terraform."
+            evidence_ids: ["EV-004"]
+          - text: "Improved release cadence."
+            evidence_ids: ["EV-002"]
+      - client: "HealthCare Inc"
+        overview:
+          text: "Implemented compliance controls."
+          evidence_ids: ["EV-004"]

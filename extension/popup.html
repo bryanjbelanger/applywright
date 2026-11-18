@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Applywright</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h2>Applywright</h2>
+  <h3>JobCopilot import (optional)</h3>
+  <div class="actions">
+    <button id="btn-scan">Scan Current Page</button>
+    <button id="btn-scan-auto">Scan Loaded Jobs (Auto-scroll)</button>
+    <button id="btn-enrich">Enrich Current Job</button>
+    <button id="btn-cancel" disabled>Cancel Scan</button>
+    <hr/>
+    <button id="btn-export" disabled>Export JSON</button>
+    <button id="btn-copy" disabled>Copy JSON</button>
+    <button id="btn-diagnostics" disabled>Copy Diagnostics</button>
+    <button id="btn-clear" disabled>Clear Results</button>
+
+  <hr/>
+  <h3>Batch Enrichment</h3>
+  <div class="actions">
+    <input type="file" id="batch-queue-file" accept=".json" style="margin-bottom: 5px;">
+    <button id="btn-batch-load">Load Enrichment Queue</button>
+    <button id="btn-batch-start" disabled>Start Batch Enrichment</button>
+    <button id="btn-batch-resume" disabled>Resume Batch</button>
+    <button id="btn-batch-cancel" disabled>Cancel Batch</button>
+    <button id="btn-batch-export" disabled>Export Batch Result</button>
+  </div>
+  <div id="batch-status" class="status">Waiting for queue...</div>
+
+  <hr/>
+  <h3>Delete Flagged Jobs</h3>
+  <div class="actions">
+    <input type="file" id="delete-list-file" accept=".json,.csv" style="margin-bottom: 5px;">
+    <button id="btn-delete-load">Load Delete List</button>
+    <button id="btn-delete-start" disabled>Delete Flagged on JobCopilot</button>
+    <button id="btn-delete-cancel" disabled>Cancel Delete</button>
+  </div>
+  <div id="delete-status" class="status">No delete list loaded. Deletes only the exact IDs in your list; each fires JobCopilot's own confirm+delete.</div>
+
+  <hr/>
+  <h3>Apply Form Filler</h3>
+  <div class="actions">
+    <input type="file" id="apply-bundle-file" accept=".json" style="margin-bottom: 5px;">
+    <button id="btn-apply-load">Load apply bundle</button>
+    <button id="btn-apply-fill" disabled>Fill this form</button>
+    <button id="btn-apply-save" disabled>Save submission record</button>
+  </div>
+  <div id="apply-status" class="status">No apply bundle loaded. This never submits an application. You answer legal questions and click Submit.</div>
+  <ul id="apply-report" class="report"></ul>
+  </div>
+  <div id="status" class="status">Waiting to scan...</div>
+  <!-- LinkedIn capture: begin -->
+  <hr/>
+  <h3>LinkedIn</h3>
+  <div class="actions">
+    <button id="btn-linkedin-capture" disabled>Capture this LinkedIn job</button>
+  </div>
+  <div id="linkedin-status" class="status"></div>
+  <!-- LinkedIn capture: end -->
+  <script src="popup.js"></script>
+  <script src="linkedin/linkedin_popup.js"></script>
+</body>
+</html>

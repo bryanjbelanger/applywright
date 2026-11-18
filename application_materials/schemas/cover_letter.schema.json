@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["company_name", "position", "paragraphs"],
+  "properties": {
+    "company_name": { "type": "string", "minLength": 1 },
+    "position": { "type": "string", "minLength": 1 },
+    "paragraphs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}
